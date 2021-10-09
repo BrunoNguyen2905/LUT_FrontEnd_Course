@@ -240,16 +240,6 @@ main {
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
-  .about-info .job-1 {
-    grid-area: job1; }
-  .about-info .job-2 {
-    grid-area: job2; }
-  .about-info .job-3 {
-    grid-area: job3; }
-  .about-info .job {
-    background: #5c5960;
-    padding: 0.5rem;
-    border-bottom: #E8BE02 5px solid; }
 
 .projects {
   display: grid;
@@ -262,6 +252,64 @@ main {
       opacity: 0.5;
       border-color: #E8BE02;
       transition: all 0.5s ease-out; }
+
+.working-title {
+  font-size: 2rem;
+  color: #E8BE02;
+  text-align: center;
+  margin-bottom: 24px; }
+
+.timeline {
+  position: relative;
+  padding: 1rem;
+  margin: 0 auto; }
+  .timeline:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    border: 1px solid tan;
+    right: 40px;
+    top: 0; }
+  .timeline:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .timeline .timeline-item {
+    padding: 1rem;
+    border-bottom: 2px solid tan;
+    position: relative;
+    margin: 1rem 3rem 1rem 1rem;
+    clear: both; }
+    .timeline .timeline-item:after {
+      content: "";
+      position: absolute; }
+    .timeline .timeline-item:before {
+      content: "";
+      position: absolute;
+      right: -0.625rem;
+      top: calc(50% - 5px);
+      border-style: solid;
+      border-color: tomato tomato transparent transparent;
+      border-width: 0.625rem;
+      transform: rotate(45deg); }
+  .timeline .timeline-year {
+    text-align: center;
+    max-width: 9.375rem;
+    margin: 0 3rem 0 auto;
+    font-size: 1.8rem;
+    background: tomato;
+    color: white;
+    line-height: 1;
+    padding: 0.5rem 0 1rem; }
+    .timeline .timeline-year:before {
+      display: none; }
+  .timeline .sub-heading {
+    color: rgba(242, 198, 2, 0.9);
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 1rem; }
+  .timeline .company-name {
+    font-style: italic; }
 
 .boxes {
   display: flex;
@@ -324,6 +372,42 @@ main {
         color: #fff;
         font-weight: 100;
         padding-left: 12px; }
+    .contact-form .form-container textarea {
+      margin-top: 12px;
+      width: 30%;
+      border: 1px solid #cfa902;
+      background-color: rgba(84, 82, 88, 0.9);
+      border-radius: 20px;
+      color: #fff;
+      padding-left: 12px; }
+      .contact-form .form-container textarea::-webkit-input-placeholder {
+        display: block !important;
+        font-style: italic;
+        color: #fff;
+        font-weight: 100;
+        padding-left: 12px; }
+      .contact-form .form-container textarea:-moz-placeholder {
+        /* Firefox 18- */
+        display: block !important;
+        font-style: italic;
+        color: #fff;
+        font-weight: 100;
+        padding-left: 12px; }
+      .contact-form .form-container textarea::-moz-placeholder {
+        /* Firefox 19+ */
+        display: block !important;
+        font-style: italic;
+        color: #fff;
+        font-weight: 100;
+        padding-left: 12px; }
+      .contact-form .form-container textarea:-ms-input-placeholder {
+        display: block !important;
+        font-style: italic;
+        color: #fff;
+        font-weight: 100;
+        padding-left: 12px; }
+      .contact-form .form-container textarea:focus, .contact-form .form-container textarea:hover {
+        border: 5px solid #b59502; }
     .contact-form .form-container .submitBtn:hover {
       background-color: rgba(242, 198, 2, 0.9); }
       .contact-form .form-container .submitBtn:hover i,
@@ -423,7 +507,7 @@ footer {
       width: 150px;
       height: 150px; }
   .about-info {
-    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-areas: "bioimage" "bio";
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
@@ -443,3 +527,29 @@ footer {
       font-size: 30px; }
   .projects {
     grid-template-columns: 1fr; } }
+
+@media screen and (min-width: 960px) {
+  .timeline {
+    padding: "2rem"; }
+    .timeline:before {
+      left: calc(50% - 1px);
+      right: auto; }
+    .timeline .timeline-item {
+      width: 44%;
+      margin: 1rem; }
+      .timeline .timeline-item:nth-of-type(2n) {
+        float: right;
+        margin: 1rem;
+        border-color: tan; }
+      .timeline .timeline-item:nth-of-type(2n):before {
+        right: auto;
+        left: -0.625rem;
+        border-color: transparent transparent tomato tomato; }
+    .timeline .timeline-year {
+      text-align: center;
+      margin: 0 auto; }
+      .timeline .timeline-year:nth-of-type(2n) {
+        float: none;
+        margin: 0 auto; }
+      .timeline .timeline-year:nth-of-type(2n):before {
+        display: none; } }

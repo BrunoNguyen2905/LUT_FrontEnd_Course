@@ -10,6 +10,7 @@
   .projects {
     grid-template-columns: repeat(3, 1fr);
   }
+  
 }
 
 // Tablets & Small Laptops
@@ -68,11 +69,7 @@
   .about-info {
     grid-template-areas:
       "bioimage"
-      "bio"
-      "job1"
-      "job2"
-      "job3";
-
+      "bio";
     grid-template-columns: 1fr;
   }
 
@@ -107,5 +104,41 @@
 
   .projects {
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .timeline {
+    padding: "2rem";
+    &:before {
+      left: calc(50% - 1px);
+      right: auto;
+    }
+    .timeline-item {
+      width: 44%;
+      margin: 1rem;
+      &:nth-of-type(2n) {
+        float: right;
+        margin: 1rem;
+        border-color: tan;
+      }
+      &:nth-of-type(2n):before {
+        right: auto;
+        left: -0.625rem;
+        border-color: transparent transparent tomato tomato;
+      }
+    }
+
+    .timeline-year {
+      text-align:center;
+      margin: 0 auto;
+      &:nth-of-type(2n) {
+          float: none;
+          margin: 0 auto;
+      }
+      &:nth-of-type(2n):before {
+          display: none
+      }
+    }
   }
 }
