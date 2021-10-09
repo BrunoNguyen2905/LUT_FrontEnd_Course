@@ -1,5 +1,7 @@
-$primary-color: #444;
-$secondary-color: #eece1a;
+// $primary-color: #444;
+// $secondary-color: #eece1a;
+$primary-color: #4F4D53;
+$secondary-color: #E8BE02;
 $show-home-image: true;
 $home-image: url(../img/background1.jpg) no-repeat center center fixed;
 // $home-image: url(https://cdn.hipwallpaper.com/m/2/19/0WGtwI.gif) no-repeat center center fixed;
@@ -29,7 +31,24 @@ $background-opacity: 0.9;
     }
   }
 }
+//placeholder
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+      @content;
+  }
 
+  &:-moz-placeholder { /* Firefox 18- */
+      @content;
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+      @content;
+  }
+
+  &:-ms-input-placeholder {
+      @content;
+  }
+}
 //Set Text Color
 @function set-text-color($color) {
   @if (lightness($color) > 40) {

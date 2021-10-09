@@ -31,10 +31,9 @@
     .sm-heading {
       font-size: 2.5rem;
       display: flex;
-  justify-content: center;
-  text-align: center;
-  
-      // animation: none;
+      justify-content: center;
+      text-align: center;
+      animation: none;
     }
   }
 
@@ -102,7 +101,6 @@
       &__socialMediaIcons {
         color: set-text-color($primary-color);
         font-size: 30px;
-       
       }
     }
   }
