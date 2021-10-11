@@ -13,10 +13,13 @@ This folder is made to show my own project according to the knowledge I learned 
 
 ## Installation
 
-Use npm package for installation.
+Use npm package for installation to run the project.
 ```bash
 npm install
 ```
-
+Use npm run sass to see the changes made in scsss files and compiled to css files .
+```bash
+npm run sass
+```
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

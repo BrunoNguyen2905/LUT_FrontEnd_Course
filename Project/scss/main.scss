@@ -129,7 +129,6 @@ main {
     grid-area: bio;
     font-size: 1.5rem;
   }
-
 }
 
 // Work/Projects
@@ -138,12 +137,36 @@ main {
   grid-gap: 0.7rem;
   grid-template-columns: repeat(3, 1fr);
 
+  .item {
+    position: relative;
+    text-align: center;
+
+    .item-title {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $secondary-color;
+      font-size: 1.1rem;
+      font-style: italic;
+      font-weight: 700;
+    }
+    .item-tech {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $secondary-color;
+      font-size: 0.9rem;
+    }
+  }
   img {
     width: 100%;
     border: 3px #fff solid;
+    opacity: 0.4;
 
     &:hover {
-      opacity: 0.5;
+      opacity: 0.1;
       border-color: $secondary-color;
       @include easeOut;
     }
@@ -213,7 +236,7 @@ main {
       display: none;
     }
   }
-  
+
   .sub-heading {
     color: rgba(lighten($secondary-color, 2), 0.9);
     padding: 0;
